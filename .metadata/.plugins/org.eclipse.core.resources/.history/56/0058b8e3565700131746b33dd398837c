@@ -1,0 +1,9 @@
+package ss.week3;
+
+public class StrongChecker extends BasicChecker{
+
+	public boolean strong(String suggestion) {
+		return (suggestion.substring(0,1).matches("[a-zA-Z]")&&(suggestion.substring(suggestion.length()-1).matches("[0-9]")));
+	}
+	
+}
