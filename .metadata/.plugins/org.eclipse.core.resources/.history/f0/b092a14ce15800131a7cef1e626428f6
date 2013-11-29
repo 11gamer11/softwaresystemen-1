@@ -1,0 +1,6 @@
+package ss.week3.hotel;
+
+public static interface Item {
+	double getAmount(){
+	}
+}

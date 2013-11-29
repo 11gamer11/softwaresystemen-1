@@ -1,0 +1,21 @@
+package ss.week3.hotel;
+
+public class Bill {
+	public Bill(java.io.PrintStream theOutStream) {
+	}
+	
+	public void close(){
+		System.out.println(this.getSum());
+	}
+	
+	public double getSum(){
+		return Bill;
+	}
+	
+	public void newItem(Bill.Item item){
+		Bill.Item = Bill.Item + item;
+		Bill += priceItem;
+		System.out.println(item);
+	}
+
+}

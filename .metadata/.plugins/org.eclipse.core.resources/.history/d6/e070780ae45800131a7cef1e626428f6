@@ -1,0 +1,30 @@
+package ss.week3.hotel;
+import java.io.PrintStream;
+
+public class Bill {
+	public PrintStream output;
+	public double totalPrice = 0;
+	
+	public static interface Item{
+		public double getAmount();
+	}
+	
+	public Bill(PrintStream outStream){
+		this.output = outStream;
+	}
+	
+	public void close(){
+		
+	}
+	
+	public double getSum(){
+		return 0;
+	}
+	
+	public void newItem(Bill.Item item){
+		double price = item.getAmount();
+		this.totalPrice += price;
+		this.output.format("%-50s%10.2f", price);
+	}
+
+}

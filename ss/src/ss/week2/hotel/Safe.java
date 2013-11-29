@@ -65,5 +65,9 @@ public class Safe {
 		SafeTest test = new SafeTest();
 		test.runTest("password");
 	}
+	
+	public String toString(){
+		return "Safe:"+state;
+	}
 
 }
