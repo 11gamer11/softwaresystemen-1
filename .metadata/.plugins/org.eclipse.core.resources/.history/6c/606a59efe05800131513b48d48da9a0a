@@ -1,0 +1,22 @@
+package ss.week3;
+
+import java.text.DecimalFormat;
+
+public class Format {
+	
+	public static void printLine(String text, double amount){
+		DecimalFormat dForm = new DecimalFormat("###.00");
+		String newAmount = dForm.format(amount);
+		String f = String.format("%-60s%20s", text, newAmount);
+		System.out.println(f);
+	}
+	
+	public static void main(String[] args){
+		printLine("Zomg", 100);
+		printLine("It's over", 9000);
+		printLine("Amount cooler:", 20);
+		printLine("Gigawatts:", 1.21);
+		printLine("The answer to life, the universe, and everything.", 42);
+	}
+	
+}
