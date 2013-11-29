@@ -1,4 +1,8 @@
 package ss.week2.hotel;
+
+import ss.week3.BasicChecker;
+import ss.week3.Checker;
+
 /**
  * Class password manager
  * @author Sophie
@@ -8,14 +12,18 @@ public class Password {
 	/**
 	 * The standard initial password.
 	 */
-	public static final String INITIAL = "INITIAL";
 	private String currentpass;
+	private String initPass;
+	private Checker checker;
 	
-	/**
-	 * Constructs a Password with the initial word provided in INITIAL.
-	 */
 	public Password(){
-		this.currentpass = INITIAL;
+		this(new BasicChecker());
+	}
+	
+	public Password(Checker c){
+		this.checker = c;
+		this.initPass = c.generatePass();
+		this.currentpass = this.initPass;
 	}
 	
 	/**

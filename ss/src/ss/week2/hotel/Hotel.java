@@ -38,11 +38,11 @@ public class Hotel {
 	}
 	
 	public void checkOut(String name){
-		if(room1.getGuest() != null && room1.getGuest().getName() == name){
+		if(room1.getGuest() != null && room1.getGuest().getName().equals(name)){
 			room1.getGuest().checkout();
 			room1.getSafe().deactivate();
 		}
-		if(room2.getGuest() != null && room2.getGuest().getName() != name){
+		if(room2.getGuest() != null && room2.getGuest().getName().equals(name)){
 			room2.getGuest().checkout();
 			room2.getSafe().deactivate();
 		}
@@ -70,7 +70,7 @@ public class Hotel {
 			//System.out.println("Guest found in: "+room1.toString());
 			return room1;
 		}
-		if(room2.getGuest() != null && room2.getGuest().getName() != name){
+		if(room2.getGuest() != null && room2.getGuest().getName() == name){
 			//System.out.println("Guest found in: "+room2.toString());
 			return room2;
 		}

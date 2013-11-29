@@ -1,0 +1,16 @@
+package ss.week3;
+
+import java.math.BigInteger;
+
+public class BasicChecker implements Checker {
+
+	public boolean acceptable(String suggestion) {
+		return !(suggestion.length()<6 || suggestion.contains(" "));
+	}
+
+	public String generatePass() {
+		
+		return new BigInteger(130, new SecureRandom()).toString(32) + "1";
+	}
+	
+}
