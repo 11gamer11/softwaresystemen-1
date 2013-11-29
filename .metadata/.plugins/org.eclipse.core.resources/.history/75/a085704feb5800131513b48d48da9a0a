@@ -1,6 +1,7 @@
 package ss.week3;
 
 public class Format {
+<<<<<<< HEAD
 	
 	public static void printLine(String text, double amount){
 		String f = String.format("%-50s%10.2f", text, amount);
@@ -15,3 +16,9 @@ public class Format {
 	}
 	
 }
+=======
+	public static void printLine(String text, double amount){
+		System.out.println(text+"\t\t"+amount);
+	}
+}
+>>>>>>> d36f4fd308c40be3f7d8a9384bdeb53c575f1316

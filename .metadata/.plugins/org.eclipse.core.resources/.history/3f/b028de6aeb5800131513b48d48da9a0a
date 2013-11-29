@@ -15,7 +15,11 @@ public class Password {
 	private String currentpass;
 	private String initPass;
 	private Checker checker;
+<<<<<<< HEAD
 	public static final String INITIAL = "asdf23dcmy234";
+=======
+	public static final String INITIAL = "INITIAL5";
+>>>>>>> d36f4fd308c40be3f7d8a9384bdeb53c575f1316
 	
 	public Password(){
 		this(new BasicChecker());
