@@ -1,9 +1,0 @@
-package ss.week3.hotel;
-
-public class Bill {
-
-	public static interface Bill.Item {
-		
-	}
-	
-}
