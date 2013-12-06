@@ -11,9 +11,8 @@ public class Hotel {
 	public Hotel(String name){
 		this.name = name;
 		this.password = new Password();
-		this.room1 = new Room(101);
-		this.room2 = new Room(102);
-		//System.out.println("Hotel created with name: "+name);
+		this.room1 = new Room(101, new Safe(this.password));
+		this.room2 = new Room(102, new Safe(this.password));
 	}
 	
 	public Room checkIn(String password, String name){

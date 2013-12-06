@@ -6,5 +6,4 @@ public class BillItem implements Bill.Item{
 		// TODO Add actual pricing.
 		return 9000.1;
 	}
-
 }
