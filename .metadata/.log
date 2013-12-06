@@ -271,3 +271,19 @@ org.eclipse.core.runtime.CoreException: The file does not exist.
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
 !SUBENTRY 1 org.eclipse.core.filebuffers 4 0 2013-12-06 09:56:08.463
 !MESSAGE The file does not exist.
+!SESSION 2013-12-06 10:23:48.786 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_25
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2013-12-06 10:23:50.013
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 4 4 2013-12-06 10:23:51.294
+!MESSAGE Conflicting handlers for org.jmlspecs.eclipse.commands.ChooseForRAC: {org.jmlspecs.openjml.eclipse.MenuActions$ChooseForRAC@1be0c344} vs {org.jmlspecs.openjml.eclipse.MenuActions$ChooseForRAC}
+
+!ENTRY org.eclipse.ui 4 4 2013-12-06 10:23:52.198
+!MESSAGE Unable to find Action Set: com.vp.vpsde.ec.actions.GeneralActionSet
