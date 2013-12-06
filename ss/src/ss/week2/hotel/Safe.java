@@ -7,10 +7,9 @@ public class Safe {
 	private OpenState safeOpen = OpenState.CLOSED;
 	public enum OpenState {OPENED, CLOSED};
 	
-	public Safe(String safePassword){
-		this.password = new Password();
-		password.setWord(Password.INITIAL, safePassword);
-		assert password.testWord(Password.INITIAL);
+	public Safe(Password safePassword){
+		this.password = safePassword;
+		assert this.password == safePassword;
 	}
 	
 	//Activates safe if password is correct.

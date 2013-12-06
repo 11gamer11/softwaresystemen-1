@@ -1,5 +1,7 @@
 package ss.week2.hotel;
 
+import ss.week3.hotel.PricedSafe;
+
 /**
  * Hotel room with number and possibly a guest.
  * @author Arend Rensink
@@ -18,9 +20,9 @@ public class Room {
      * Creates a <code>Room</code> with the given number, without a guest.
      * @param no number of the new <code>Room</code>
      */
-    public Room(int no) {
+    public Room(int no, PricedSafe pricedSafe) {
     	number = no;
-    	safe = new Safe(Password.INITIAL);
+    	safe = pricedSafe;
     }
 
     // ------------------ Queries --------------------------
