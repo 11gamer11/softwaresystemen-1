@@ -14,6 +14,7 @@ public class Password {
 	 */
 	private String currentpass;
 	private String initPass;
+	@SuppressWarnings("unused")
 	private Checker checker;
 	public static final String INITIAL = "asdf23dcmy234";
 	
