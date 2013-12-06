@@ -18,9 +18,9 @@ public class Room {
      * Creates a <code>Room</code> with the given number, without a guest.
      * @param no number of the new <code>Room</code>
      */
-    public Room(int no) {
+    public Room(int no, Safe pSafe) {
     	number = no;
-    	safe = new Safe(Password.INITIAL);
+    	safe = pSafe;
     }
 
     // ------------------ Queries --------------------------

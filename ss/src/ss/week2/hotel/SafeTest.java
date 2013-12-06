@@ -24,8 +24,9 @@ public class SafeTest {
     
     /** Calls all tests in this class one-by-one. */
     public int runTest(String pass) {
+    	Password password = new Password();
         System.out.println("Testclass: " + this.getClass());
-        setUp("password");
+        setUp(password);
         this.pass.activate(pass);
         this.safeStateActive = true;
         isActiveTest();
@@ -64,7 +65,7 @@ public class SafeTest {
      * Sets the instance variable <tt>pass</tt> to a well-defined initial value.
      * All test methods should be preceded by a call to this method.
      */
-    public void setUp(String password) {
+    public void setUp(Password password) {
         pass = new Safe(password);
     }
     
