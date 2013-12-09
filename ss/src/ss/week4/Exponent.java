@@ -2,20 +2,18 @@ package ss.week4;
 
 public class Exponent implements Function{
 	public double n;
-	public double c;
 	
-	public double apply(double arg) {
-		return c*Math.pow(arg, n);
+	public double apply(double x) {
+		return Math.pow(x,this.n);
 	}
 
 	public Function derivative() {
-		Function exponent = new Exponent(n-1,n*c);
+		Function exponent = new Exponent(n-1);
 		return exponent;
 	}
 	
-	public Exponent(double n, double c){
+	public Exponent(double n){
 		this.n = n;
-		this.c = c;
 	}
 	
 	public String toString(){
