@@ -26,11 +26,13 @@ public class TicTacToe {
      */
     private static Player createPlayer(String s, Mark m) {
         if (s.equals("-N")) {
- //           return new ComputerPlayer(m, new NaiveStrategy());
- //       } else if (s.equals("-S")) {
- //           return new ComputerPlayer(m, new SmartStrategy());
- //       } else if (s.equals("-P")) {
- //           return new ComputerPlayer(m, new PerfectStrategy());
+<<<<<<< HEAD
+            return new ComputerPlayer(m, new NaiveStrategy());
+        } else if (s.equals("-S")) {
+            return new ComputerPlayer(m, new SmartStrategy());
+        } else if (s.equals("-P")) {
+            return new ComputerPlayer(m, new PerfectStrategy());
+=======
             //return new ComputerPlayer(m, new NaiveStrategy());
             return null;
         } else if (s.equals("-S")) {
@@ -39,6 +41,7 @@ public class TicTacToe {
         } else if (s.equals("-P")) {
             //return new ComputerPlayer(m, new PerfectStrategy());
             return null;
+>>>>>>> kevin
         } else {
             return new HumanPlayer(s, m);
         }
