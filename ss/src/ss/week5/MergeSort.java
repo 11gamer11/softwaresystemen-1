@@ -18,7 +18,7 @@ public class MergeSort {
 			List<Integer> x = a.subList(l, m);
 			List<Integer> y = a.subList(m,h);
 			
-			LinkedList<Integer> startlist = new LinkedList<Integer>(x);
+			LinkedList<Integer> startlist = new LinkedList<Integer>(x); 
 			LinkedList<Integer> endlist = new LinkedList<Integer>(y);
 			LinkedList<Integer> f = mergeSort(startlist);
 			LinkedList<Integer> s = mergeSort(endlist);
