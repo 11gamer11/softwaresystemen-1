@@ -1,5 +1,7 @@
 package ss.week2.hotel;
 
+import ss.week1.Password;
+
 public class Safe {
 	public Password password;
 	public enum State {OFF,ON};

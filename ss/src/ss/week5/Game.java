@@ -151,7 +151,7 @@ public class Game {
         if (board.hasWinner()) {
             Player winner = board.isWinner(players[0].getMark()) ? players[0]
                     : players[1];
-            System.out.println("Speler " + winner.getName() + " ("
+            System.out.println("Player " + winner.getName() + " ("
                     + winner.getMark().toString() + ") has won!");
         } else {
             System.out.println("Draw. There is no winner!");
