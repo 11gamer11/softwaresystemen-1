@@ -2,7 +2,6 @@ package ss.week5;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
@@ -81,11 +80,27 @@ public class Leaderboard<E extends Comparable<E>, F> {
 	 * Team retrieval functions
 	 */
 	
-	public List<E> getBestResultOfAchiever(){
+	public Score<E,F> getBestResultOfAchiever(F achiever){
+		
+		Iterator<Score<E,F>> iter = scoreDB.iterator();
+		Score<E,F> bestScore = null;
+		while(iter.hasNext()){
+			Score<E,F> score = iter.next();
+			if(score.getAchiever() == achiever){
+				if(score.compareTo(bestScore) == 1){
+					bestScore = score;
+				}
+			}
+		}
+		
+		return bestScore;
+	}
+	
+	public Calendar getBestDayForAchiever(F achiever){
 		return null;
 	}
 	
-	public Calendar getBestDayForAchiever(){
+	public Score<E,F> getAverageResultForAchiever(F achiever){
 		return null;
 	}
 
@@ -95,10 +110,12 @@ public class Leaderboard<E extends Comparable<E>, F> {
 		b.addScore(50, "Kevin Alberts");
 		b.addScore(0, "John Smith");
 		b.addScore(20, "Rainbow Dash");
+		b.addScore(-5, "Derpy Hooves");
 		b.addScore(42, "Arthur Dent");
 		b.addScore(9001, "Goku");
 		
-		b.getScoreOfDay(Calendar.getInstance());
+		System.out.println(b.getScoreOfDay(Calendar.getInstance()));
+		
 	}
 	
 }
