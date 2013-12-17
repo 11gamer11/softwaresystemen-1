@@ -20,8 +20,8 @@ public abstract class Player {
     /*@
        requires theName != null;
        requires theMark == theMark.XX || theMark == theMark.OO;
-       ensures this.gettheName() == theName;
-       ensures this.gettheMark() == theMark;
+       ensures this.getName() == theName;
+       ensures this.getMark() == theMark;
      */
     /**
      * Creates a new Player object.
