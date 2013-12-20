@@ -4,44 +4,44 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class MergeSort {
-	public static LinkedList<Integer> mergeSort(LinkedList<Integer> a){
-		int h=a.size();
-		int m=0;
-		int l=0;
-		if(h<=1){
-			return a;
+	public static LinkedList<Integer> mergeSort(LinkedList<Integer> hetHeeeeeeleLangeLijstjeDatGegevenWordtOmdatTwanHetPerSeWil){
+		int highBorder=hetHeeeeeeleLangeLijstjeDatGegevenWordtOmdatTwanHetPerSeWil.size();
+		int middleBorder=0;
+		int lowBorder=0;
+		if(highBorder<=1){
+			return hetHeeeeeeleLangeLijstjeDatGegevenWordtOmdatTwanHetPerSeWil;
 		}
 		else {
-			m = (h-l)/2;
+			middleBorder = (highBorder-lowBorder)/2;
 			
-			List<Integer> x = a.subList(l, m);
-			List<Integer> y = a.subList(m,h);
+			List<Integer> x = hetHeeeeeeleLangeLijstjeDatGegevenWordtOmdatTwanHetPerSeWil.subList(lowBorder, middleBorder);
+			List<Integer> y = hetHeeeeeeleLangeLijstjeDatGegevenWordtOmdatTwanHetPerSeWil.subList(middleBorder,highBorder);
 			
 			LinkedList<Integer> startlist = new LinkedList<Integer>(x); 
 			LinkedList<Integer> endlist = new LinkedList<Integer>(y);
-			LinkedList<Integer> f = mergeSort(startlist);
-			LinkedList<Integer> s = mergeSort(endlist);
-			LinkedList<Integer> r = new LinkedList<Integer>();
-			int fi = 0;
-			int si = 0;
+			LinkedList<Integer> firstLijst = mergeSort(startlist);
+			LinkedList<Integer> secondLijst = mergeSort(endlist);
+			LinkedList<Integer> resultLijst = new LinkedList<Integer>();
+			int firstIndex = 0;
+			int secondIndex = 0;
 			
-			while(fi < f.size() && si < s.size()){
-				if(f.get(fi) < s.get(si)){
-					r.add(r.size(), f.get(fi));
-					fi++;
+			while(firstIndex < firstLijst.size() && secondIndex < secondLijst.size()){
+				if(firstLijst.get(firstIndex) < secondLijst.get(secondIndex)){
+					resultLijst.add(resultLijst.size(), firstLijst.get(firstIndex));
+					firstIndex++;
 				}
 				else{
-					r.add(r.size(),s.get(si));
-					si++;
+					resultLijst.add(resultLijst.size(),secondLijst.get(secondIndex));
+					secondIndex++;
 				}
 			}
-			if(fi<f.size()){
-				r.addAll(r.size(), f.subList(fi,f.size())); 
+			if(firstIndex<firstLijst.size()){
+				resultLijst.addAll(resultLijst.size(), firstLijst.subList(firstIndex,firstLijst.size())); 
 			}
-			else if(si<s.size()){
-				r.addAll(r.size(),s.subList(si, s.size()));
+			else if(secondIndex<secondLijst.size()){
+				resultLijst.addAll(resultLijst.size(),secondLijst.subList(secondIndex, secondLijst.size()));
 			}
-			return r;
+			return resultLijst;
 		}
 	}
 	
