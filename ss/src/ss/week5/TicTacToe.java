@@ -25,18 +25,11 @@ public class TicTacToe {
      * @return the Player object
      */
     private static Player createPlayer(String s, Mark m) {
-        if (s.equals("-N")) {
- //           return new ComputerPlayer(m, new NaiveStrategy());
- //       } else if (s.equals("-S")) {
- //           return new ComputerPlayer(m, new SmartStrategy());
- //       } else if (s.equals("-P")) {
- //           return new ComputerPlayer(m, new PerfectStrategy());
-            //return new ComputerPlayer(m, new NaiveStrategy());
-            return null;
-        } else if (s.equals("-S")) {
-            //return new ComputerPlayer(m, new SmartStrategy());
-            return null;
-        } else if (s.equals("-P")) {
+        if (s.equals("-N") || s.equals("-n")) {
+            return new ComputerPlayer(m, new NaiveStrategy());
+        } else if (s.equals("-S") || s.equals("-s")) {
+            return new ComputerPlayer(m, new SmartStrategy());
+        } else if (s.equals("-P") || s.equals("-p")) {
             //return new ComputerPlayer(m, new PerfectStrategy());
             return null;
         } else {

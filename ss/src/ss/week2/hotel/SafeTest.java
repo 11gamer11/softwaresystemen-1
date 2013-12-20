@@ -1,5 +1,6 @@
 package ss.week2.hotel;
 
+import ss.week1.Password;
 import ss.week2.hotel.Safe;
 
 /** 
