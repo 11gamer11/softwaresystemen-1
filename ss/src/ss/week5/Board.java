@@ -13,7 +13,7 @@ public class Board {
     public static final int DIM = 3;
     private static final String[] NUMBERING = {" 0 | 1 | 2 ", "---+---+---",
         " 3 | 4 | 5 ", "---+---+---", " 6 | 7 | 8 "};
-    private static final String LINE = NUMBERING[1];
+    private static final String LINE = "-------+-------+-------"; //NUMBERING[1];
     private static final String DELIM = "     ";
 
     // -- Instance variables -----------------------------------------
@@ -21,7 +21,7 @@ public class Board {
     /*@
        private invariant fields.length == DIM*DIM;
        invariant (\forall int i; 0 <= i & i < DIM*DIM;
-           getField(i) == Mark.EMPTY || getField(i) == Mark.XX || getField(i) == Mark.OO);
+           getField(i) == Mark.EMPTY || getField(i) == Mark.XXXXX || getField(i) == Mark.OOOOO);
      */
     /**
      * The DIM by DIM fields of the Tic Tac Toe board. See NUMBERING for the
@@ -131,7 +131,7 @@ public class Board {
 
     /*@
        requires this.isField(i);
-       ensures \result == Mark.EMPTY || \result == Mark.XX || \result == Mark.OO;
+       ensures \result == Mark.EMPTY || \result == Mark.XXXXX || \result == Mark.OOOOO;
      */
     /**
      * Returns the content of the field <code>i</code>.
@@ -152,7 +152,7 @@ public class Board {
     // E{Bord-impl}
     /*@
        requires this.isField(row,col);
-       ensures \result == Mark.EMPTY || \result == Mark.XX || \result == Mark.OO;
+       ensures \result == Mark.EMPTY || \result == Mark.XXXXX || \result == Mark.OOOOO;
      */
     /**
      * Returns the content of the field referred to by the (row,col) pair.
@@ -350,7 +350,7 @@ public class Board {
 
     // E{Bord-impl}
     /*@
-       requires m == Mark.XX | m == Mark.OO;
+       requires m == Mark.XXXXX | m == Mark.OOOOO;
        ensures \result == this.hasRow(m) ||
                                 this.hasColumn(m) |
                                 this.hasDiagonal(m);
@@ -375,7 +375,7 @@ public class Board {
 
     // E{Bord-impl}
     /*@
-       ensures \result == isWinner(Mark.XX) | \result == isWinner(Mark.OO);
+       ensures \result == isWinner(Mark.XXXXX) | \result == isWinner(Mark.OOOOO);
 
      */
     /**
@@ -388,7 +388,7 @@ public class Board {
     /*@pure*/
     public boolean hasWinner() {
         // E{Bord}
-        return isWinner(Mark.XX) || isWinner(Mark.OO);
+        return isWinner(Mark.XXXXX) || isWinner(Mark.OOOOO);
         // B{Bord}
         // I{Bord} // [BODY-NOG-TOE-TE-VOEGEN]
         // I{Bord} return false;

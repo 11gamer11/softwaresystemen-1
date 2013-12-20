@@ -8,7 +8,6 @@ public class MergeSort {
 		int h=a.size();
 		int m=0;
 		int l=0;
-		LinkedList<Integer> list = new LinkedList<Integer>();
 		if(h<=1){
 			return a;
 		}

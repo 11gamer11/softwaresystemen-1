@@ -10,11 +10,11 @@ package ss.week5;
  */
 public enum Mark {
     
-    EMPTY, XX, OO;
+    EMPTY, XXXXX, OOOOO;
 
     /*@
-       ensures this == Mark.XX ==> \result == Mark.OO;
-       ensures this == Mark.OO ==> \result == Mark.XX;
+       ensures this == Mark.XXXXX ==> \result == Mark.OOOOO;
+       ensures this == Mark.OOOOO ==> \result == Mark.XXXXX;
        ensures this == Mark.EMPTY ==> \result == Mark.EMPTY;
      */
     /**
@@ -23,10 +23,10 @@ public enum Mark {
      * @return the other mark is this mark is not EMPTY or EMPTY
      */
     public Mark other() {
-        if (this == XX) {
-            return OO;
-        } else if (this == OO) {
-            return XX;
+        if (this == XXXXX) {
+            return OOOOO;
+        } else if (this == OOOOO) {
+            return XXXXX;
         } else {
             return EMPTY;
         }

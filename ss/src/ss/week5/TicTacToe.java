@@ -30,8 +30,9 @@ public class TicTacToe {
         } else if (s.equals("-S") || s.equals("-s")) {
             return new ComputerPlayer(m, new SmartStrategy());
         } else if (s.equals("-P") || s.equals("-p")) {
-            //return new ComputerPlayer(m, new PerfectStrategy());
-            return null;
+            return new ComputerPlayer(m, new PerfectStrategy());
+        } else if (s.equals("-H") || s.equals("-h")) {
+            return new ComputerPlayer(m, new PeterStrategy());
         } else {
             return new HumanPlayer(s, m);
         }
@@ -45,8 +46,8 @@ public class TicTacToe {
             System.out.println("--------------------------");
 
             // E{BKE-mens}
-            Player s1 = createPlayer(args[0], Mark.XX);
-            Player s2 = createPlayer(args[1], Mark.OO);
+            Player s1 = createPlayer(args[0], Mark.XXXXX);
+            Player s2 = createPlayer(args[1], Mark.OOOOO);
             // B{BKE-mens}
             // I{BKE-mens} Speler s1 = new MensSpeler(args[0], Mark.XX);
             // I{BKE-mens} Speler s2 = new MensSpeler(args[1], Mark.OO);

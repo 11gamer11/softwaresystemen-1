@@ -14,7 +14,7 @@ public class HumanPlayer extends Player {
 
     /*@
        requires name != null;
-       requires mark == Mark.XX || mark == Mark.OO;
+       requires mark == Mark.XXXXX || mark == Mark.OOOOO;
        ensures this.getName() == name;
        ensures this.getMark() == mark;
     */

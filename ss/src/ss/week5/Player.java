@@ -19,7 +19,7 @@ public abstract class Player {
 
     /*@
        requires theName != null;
-       requires theMark == theMark.XX || theMark == theMark.OO;
+       requires theMark == theMark.XXXXX || theMark == theMark.OOOOO;
        ensures this.getName() == theName;
        ensures this.getMark() == theMark;
      */
