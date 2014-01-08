@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
-public class RecursiveStrategy implements Strategy {
+public class PerfectStrategy implements Strategy {
 
 	/**
 	 * Name of the strategy
