@@ -1,2 +1,14 @@
 .metadata/
 ss/bin/
+ss/.settings/
+ss/.classpath
+ss/.project
+Design8/bin/
+Design8/.settings/
+Design8/.classpath
+Design8/.project
+Rolit/bin/
+Rolit/.settings/
+Rolit/.classpath
+Rolit/.project
+.gitignore~
