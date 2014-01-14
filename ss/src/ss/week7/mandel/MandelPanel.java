@@ -18,8 +18,8 @@ class MandelPanel extends JPanel implements Runnable
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public void draw() {
-		(new MandelThread(this)).run();
+	 void draw() {
+		new MandelThread(this).start();
 	}
 
 
@@ -119,7 +119,6 @@ class MandelPanel extends JPanel implements Runnable
 
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
-		
+		drawMandel();
 	}
 }

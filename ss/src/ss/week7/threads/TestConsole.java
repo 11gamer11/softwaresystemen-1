@@ -13,11 +13,16 @@ public class TestConsole extends Thread {
 	/**
 	 * @return som van twee getallen die worden gevraagd via t console
 	 */
-	private String sum() {
+	private void sum() {
+		int getal1;
+		int getal2;
 		String thread = this.getName();
-		int getal1 = Console.readInt("get number 1?");
-		int getal2 = Console.readInt("get number 2?");
-		return (thread + ": " + getal1 + "+" + getal2 + "=" + (getal1+getal2));
+		synchronized (Console.class) {
+			getal1 = Console.readInt(thread+": get number 1?");
+			getal2 = Console.readInt(thread+": get number 2?");
+		}
+		System.out.println(thread + ": " + getal1 + "+" + getal2 + "=" + (getal1+getal2));
+		
 	}
 	
 	TestConsole(String name){
@@ -27,7 +32,8 @@ public class TestConsole extends Thread {
 	public static void main(String[] args){
 		TestConsole console1 = new TestConsole("Thread A");
 		TestConsole console2 = new TestConsole("Thread B");
-		System.out.println(console1.sum());
-		System.out.println(console2.sum());
+		console1.start();
+		console2.start();
+		
 	}
 }

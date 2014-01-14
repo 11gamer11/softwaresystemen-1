@@ -2,6 +2,7 @@ package ss.week6.ttt;
 
 import java.awt.FlowLayout;
 import java.awt.Frame;
+import java.awt.GridLayout;
 import java.awt.Label;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -88,12 +89,11 @@ public class TTTView extends Frame implements Observer{
 		JButton Button9 = new JButton();
 		JButton Button10 = new JButton();
 		buttons = new JButton[] {Button, Button2, Button3, Button4, Button5, Button6, Button7, Button8, Button9, Button10};
-		FlowLayout layout = new FlowLayout();
+		GridLayout layout = new GridLayout(4,3);
 		frame.setLayout(layout);
-		frame.setSize(150, 175);
+		frame.setSize(200, 200);
 		for(int i=0; i<9; i++){
 			buttons[i].setText(" ");
-			buttons[i].setSize(10, 10);
 			frame.add(buttons[i]);
 			buttons[i].setVisible(true);
 		}
@@ -103,6 +103,7 @@ public class TTTView extends Frame implements Observer{
 		frame.add(Button10);
 		frame.setVisible(true);
 		game.addObserver(this);
+		label.setText("X's turn");
 		controller = new TTTController(buttons ,game);
 	}
 	
@@ -111,17 +112,34 @@ public class TTTView extends Frame implements Observer{
 		
 		public TTTController (JButton[] Buttons, Game model){
 			this.model = model;
-			for(int i=0; i<9; i++){
-				Buttons[i].addActionListener(this);
+			for(int i=0; i<10; i++){
+				buttons[i].addActionListener(this);
 			}
 		}
 		
 		@Override
 		public void actionPerformed(ActionEvent arg0) {
 			for(int i=0; i<9; i++){
-				if(model.getBoard().isEmptyField(i)){
+				//arg0 is gelijk aan de verwijzing naar de Button
+				if((buttons[i]==arg0.getSource()) && model.getBoard().isEmptyField(i)){
 					model.takeTurn(i);
+					if(model.getCurrent()==Mark.XX){
+						buttons[i].setText("O");
+					}
+					else
+					{
+						buttons[i].setText("X");
+					}
 				}
+			}
+			if((buttons[9])==arg0.getSource()){
+				for(int i=0; i<9; i++){
+					buttons[i].setEnabled(true);
+					buttons[i].setText("");
+					label.setText("X's turn");
+				}
+				model.reset();
+				buttons[9].setEnabled(false);
 			}
 		}
 	}
