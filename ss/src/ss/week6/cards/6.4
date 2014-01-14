@@ -1,0 +1,53 @@
+6.4 
+1. How can you construct a PrintWriter or BufferedReader object that corresponds to a file on your computer?
+File file = new File ("..");
+BufferedReader reader = new BufferedReader(new FileReader(file));
+
+File file = new File ("..");
+PrintWriter writer = new PrintWriter(file);
+
+2. What does it mean to flush a Writer (see Writer.flush())?
+The Writer usually buffers some of your output data in memory and tries to write it in bigger blocks at a time.
+Flushing will cause an immediate write to disk (System.out ook) from the buffer, so if the program crashes, no data will be lost.
+Verzekert dat buffer is weggeschreven
+
+3. How can you make sure that after every call to println a PrintWriter is automatically flushed?
+With the constructor PrintWriter(Writer out, boolean autoFlush) you can create a new PrintWriter.
+This new PrintWriter will flush the output buffer when the method println, printf or format is used if it is true.
+
+
+6.7
+1. What would be the reason for this difference?
+PrintWriter wordt aangemaakt in het programma, en zal daarom altijd bestaan.
+De BufferedReader heeft echter per se een file nodig die hij leest om te bestaan.
+
+2. For a PrintWriter, how can you check whether output has succeeded?
+checkError()
+
+3. How can you construct a BufferedReader based on standard output?
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+6.12
+Under which conditions can objects be written and read using object streams?
+Objects that implement the marker interface Serializable
+
+6.15
+Choice -> pop-up menu of choices
+ItemListener[] -> returns an array of all the item listeners registered on this choice
+To implement you need the listener
+public void addItemListener(ItemListener 1)
+
+Component Listener
+Focus Listener
+Hierarchy Bounds Listener
+Hierarchy Listener
+Input Method Listener
+Key Listener
+Mouse Listener
+Mouse Motion Listener
+MouseWheel Listener
+Property Change Listener
+
+Button -> creates a labelled button
+ActionListener[] -> returns an array of all the action listeners registered on this button
+public void addActionListener(ActionListener 1)
