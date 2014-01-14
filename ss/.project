@@ -26,16 +26,4 @@
 		<nature>org.jmlspecs.OpenJMLUI.JMLNatureID</nature>
 		<nature>net.sf.eclipsecs.core.CheckstyleNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>src/ss/week3/hotel/PricedRoom.class</name>
-			<type>1</type>
-			<locationURI>PROJECT_LOC/bin/ss/week3/hotel/PricedRoom.class</locationURI>
-		</link>
-		<link>
-			<name>src/ss/week3/hotel/PricedSafe.class</name>
-			<type>1</type>
-			<locationURI>PROJECT_LOC/bin/ss/week3/hotel/PricedSafe.class</locationURI>
-		</link>
-	</linkedResources>
 </projectDescription>

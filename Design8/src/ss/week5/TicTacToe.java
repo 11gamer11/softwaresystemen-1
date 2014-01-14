@@ -31,10 +31,6 @@ public class TicTacToe {
             return new ComputerPlayer(m, new SmartStrategy());
         } else if (s.equals("-P") || s.equals("-p")) {
             return new ComputerPlayer(m, new PerfectStrategy());
-        } else if (s.equals("-H") || s.equals("-h")) {
-            return new ComputerPlayer(m, new PeterStrategy());
-        } else if (s.equals("-R") || s.equals("-r")) {
-            return new ComputerPlayer(m, new RecursiveStrategy());
         } else {
             return new HumanPlayer(s, m);
         }

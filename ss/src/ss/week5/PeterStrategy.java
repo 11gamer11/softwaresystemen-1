@@ -28,8 +28,8 @@ public class PeterStrategy implements Strategy {
 	/**
 	 * Enables debugging output if true
 	 */
-	private boolean verbose;
-	private boolean debug;
+	private boolean verbose = false;
+	private boolean debug = false;
 	
 	
 	/**
